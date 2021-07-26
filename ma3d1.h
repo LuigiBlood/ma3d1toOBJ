@@ -34,6 +34,8 @@ struct ma3d1_hdr {
 };
 
 /* These are guessed */
+
+/* Model Data */
 struct data_hdr {
 	u32 num_vertdefs;	/* 0x00 */
 	u32 num_unkdefs;	/* 0x04 */
@@ -75,4 +77,17 @@ struct tridef {
 	u16 unk2;
 	u16 unk3;
 	u16 unk4;
+}
+
+/* Block Data */
+/* Contains array of blockdefs, amount = num_block */
+struct blockdef {
+	u32 id;
+	u32 unk1;
+	u32 unk2;
+	u32 unk3;
+	u32 rgba;
+	float[16] trans;
+	float[16] rot;
+	float[16] scale;
 }
